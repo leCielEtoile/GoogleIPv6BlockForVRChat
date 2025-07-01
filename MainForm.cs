@@ -30,7 +30,7 @@ namespace GoogleIPv6BlockForVRChat
             _logManager = new LogManager();
             _firewallManager = new FirewallManager(_logManager);
             _googleIPService = new GoogleIPService(_logManager);
-            _connectionTester = new ConnectionTester(_logManager);
+            _connectionTester = new ConnectionTester(_logManager, _firewallManager);
 
             InitializeAsync();
         }
